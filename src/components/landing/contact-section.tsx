@@ -87,7 +87,7 @@ export function ContactSection() {
 
         <FadeIn delay={0.15} className="mx-auto w-full max-w-md lg:max-w-none">
           <PortfolioImage
-            src="/miracle2.JPG"
+            src="/miracleb.jpg"
             alt="Miracle Bello — professional portrait"
             aspect="tall"
             className="ring-2 ring-ink/10"

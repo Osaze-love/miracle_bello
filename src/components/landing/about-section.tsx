@@ -34,10 +34,10 @@ export function AboutSection() {
           </h2>
         </FadeIn>
 
-        <div className="mt-10 grid items-start gap-10 lg:mt-14 lg:grid-cols-12 lg:gap-16">
+        <div className="mt-10 grid items-start gap-10 lg:mt-14 lg:grid-cols-12 lg:items-center lg:gap-16">
           <FadeIn className="lg:col-span-5" delay={0.08}>
             <PortfolioImage
-              src="/miracle1.JPG"
+              src="/miraclea.JPG"
               alt="Miracle Bello — social media manager portrait"
               priority
             />
@@ -51,11 +51,11 @@ export function AboutSection() {
               feels human, bold, and impossible to ignore.
             </p>
             <p className="section-body mt-5 text-ink/55">
-              From beauty brands to edtech and music channels, I build strategies
+              From beauty brands to edtech to lifestyle channels, I build strategies
               that turn passive scrollers into loyal communities. Think less
-              &ldquo;posting schedule&rdquo; and more{" "}
-              <em className="text-pink-deep not-italic font-medium">
-                cultural moment.
+              &ldquo;posting schedule&rdquo; and more of{" "}
+              <em className="text-pink-deep font-medium not-italic">
+                building culture.
               </em>
             </p>
 

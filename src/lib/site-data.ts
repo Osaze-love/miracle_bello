@@ -6,8 +6,10 @@ export const siteContact = {
     "https://www.linkedin.com/in/miracle-bello-boluwaduro-25b9933b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 } as const;
 
+export const cvUrl = "/miracle-bello-cv.docx";
+
 export const workStats = [
-  { value: "13M+", label: "YouTube views grown" },
+  { value: "40M+", label: "YouTube views grown" },
   { value: "90%", label: "Audience reach increase" },
   { value: "2×", label: "Follower growth (beauty brand)" },
   { value: "4+", label: "Brands & channels managed" },
@@ -52,10 +54,10 @@ export const experiences: Experience[] = [
     company: "The 7th Sound",
     period: "2025 – 2026",
     tag: "YouTube",
-    highlight: "100K → 13M+ views (13,000%+ growth)",
+    highlight: "100K → 40M+ views",
     bullets: [
       "Managed full YouTube channel operations, including uploads, metadata optimisation, and publishing schedules.",
-      "Grew total viewership from 100,000 to over 13 million views through strategic content management and audience growth tactics.",
+      "Grew total viewership from 100,000 to over 40 million views through strategic content management and audience growth tactics.",
     ],
   },
   {

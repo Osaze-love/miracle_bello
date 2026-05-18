@@ -9,10 +9,12 @@ import { WorkSection } from "./work-section";
 import { ProcessSection } from "./process-section";
 import { ContactSection } from "./contact-section";
 import { SiteFooter } from "./site-footer";
+import { CvFloatingButton } from "./cv-floating-button";
 
 export function LandingPage() {
   return (
     <ParallaxProvider>
+      <CvFloatingButton />
       <SiteNav />
       <main>
         <HeroSection />
