@@ -32,7 +32,7 @@ const services = [
     icon: BarChart3,
     title: "Growth & Analytics",
     description:
-      "Performance dashboards, A/B testing, and insights that turn likes into leads and followers into fans.",
+      "Performance dashboards and insights that turn likes into leads and followers into fans.",
   },
 ];
 
