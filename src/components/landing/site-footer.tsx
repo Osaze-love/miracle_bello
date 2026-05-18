@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AtSign, Globe, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { InstagramIcon, LinkedInIcon } from "@/components/icons/social-icons";
 import { scrollToSection } from "@/lib/scroll-to";
 import { siteContact } from "@/lib/site-data";
 
@@ -11,13 +12,13 @@ const footerLinks = [
   { label: "Experience", id: "work" },
   { label: "Process", id: "process" },
   { label: "Contact", id: "contact" },
-];
+] as const;
 
 const socials = [
-  { icon: AtSign, href: siteContact.instagram, label: "Instagram" },
-  { icon: Globe, href: siteContact.linkedin, label: "LinkedIn" },
+  { icon: InstagramIcon, href: siteContact.instagram, label: "Instagram" },
+  { icon: LinkedInIcon, href: siteContact.linkedin, label: "LinkedIn" },
   { icon: Mail, href: `mailto:${siteContact.email}`, label: "Email" },
-];
+] as const;
 
 export function SiteFooter() {
   const year = new Date().getFullYear();

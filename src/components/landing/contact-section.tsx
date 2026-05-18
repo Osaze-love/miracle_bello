@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import { InstagramIcon, LinkedInIcon } from "@/components/icons/social-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { siteContact } from "@/lib/site-data";
@@ -70,8 +71,8 @@ export function ContactSection() {
               rel="noopener noreferrer"
               className={outlineLinkClass}
             >
+              <InstagramIcon size={16} />
               Instagram
-              <ArrowUpRight size={16} />
             </a>
             <a
               href={siteContact.linkedin}
@@ -79,8 +80,8 @@ export function ContactSection() {
               rel="noopener noreferrer"
               className={outlineLinkClass}
             >
+              <LinkedInIcon size={16} />
               LinkedIn
-              <ArrowUpRight size={16} />
             </a>
           </div>
         </FadeIn>
