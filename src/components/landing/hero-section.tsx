@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
 import { ChevronDown } from "lucide-react";
 import { scrollToSection } from "@/lib/scroll-to";
+import { CvFloatingButton } from "./cv-floating-button";
 
 export function HeroSection() {
   return (
@@ -11,6 +12,8 @@ export function HeroSection() {
       id="home"
       className="relative flex h-screen min-h-[100dvh] w-full items-center justify-center overflow-hidden bg-pink-hero"
     >
+      <CvFloatingButton position="hero" />
+
       <Parallax speed={-20} className="pointer-events-none absolute inset-0">
         <motion.div
           animate={{ rotate: 360 }}

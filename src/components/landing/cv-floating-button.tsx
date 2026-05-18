@@ -6,13 +6,28 @@ import { cvUrl } from "@/lib/site-data";
 
 const RING_TEXT = "MIRACLE BELLO ✦ MIRACLE BELLO ✦ MIRACLE BELLO ✦ ";
 
-export function CvFloatingButton() {
+const POSITION_CLASSES = {
+  /** Inside hero (pink) — scrolls away with that section */
+  hero: "absolute left-4 top-[calc(4rem+1rem)] z-20 sm:left-6 lg:top-[calc(4.5rem+1rem)]",
+  /** Fixed site-wide */
+  "bottom-right": "fixed right-4 bottom-4 z-60 sm:right-6 sm:bottom-6",
+} as const;
+
+export type CvFloatingButtonPosition = keyof typeof POSITION_CLASSES;
+
+function CvFloatingButtonInstance({
+  position,
+}: {
+  position: CvFloatingButtonPosition;
+}) {
+  const ringPathId = `cv-ring-path-${position}`;
+
   return (
-    <div
-      className="pointer-events-none fixed right-4 bottom-4 z-[60] sm:right-6 sm:bottom-6"
+    <motion.div
+      className={`pointer-events-none ${POSITION_CLASSES[position]}`}
       aria-hidden={false}
     >
-      <div className="pointer-events-auto relative h-[7.5rem] w-[7.5rem] sm:h-[8.5rem] sm:w-[8.5rem]">
+      <motion.div className="pointer-events-auto relative h-[7.5rem] w-[7.5rem] sm:h-[8.5rem] sm:w-[8.5rem]">
         <motion.div
           className="absolute inset-0 motion-reduce:animate-none"
           animate={{ rotate: 360 }}
@@ -27,7 +42,7 @@ export function CvFloatingButton() {
           >
             <defs>
               <path
-                id="cv-ring-path"
+                id={ringPathId}
                 d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"
               />
             </defs>
@@ -35,7 +50,7 @@ export function CvFloatingButton() {
               fill="currentColor"
               className="fill-ink text-[9.5px] font-medium tracking-[0.28em] uppercase sm:text-[10px]"
             >
-              <textPath href="#cv-ring-path" startOffset="0%">
+              <textPath href={`#${ringPathId}`} startOffset="0%">
                 {RING_TEXT}
               </textPath>
             </text>
@@ -53,7 +68,15 @@ export function CvFloatingButton() {
           <FileDown size={16} strokeWidth={2} />
           <span className="text-[10px] font-bold tracking-[0.2em]">CV</span>
         </motion.a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
+}
+
+export function CvFloatingButton({
+  position = "bottom-right",
+}: {
+  position?: CvFloatingButtonPosition;
+}) {
+  return <CvFloatingButtonInstance position={position} />;
 }
