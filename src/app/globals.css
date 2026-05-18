@@ -8,6 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-source-serif);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-display);
   --font-display: var(--font-display);
@@ -185,8 +186,10 @@
 }
 
 .section-body {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
   font-size: 0.875rem;
-  line-height: 1.65;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
 }
 
 @media (min-width: 640px) {
