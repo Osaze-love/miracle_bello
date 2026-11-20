@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FadeIn } from "./fade-in";
 import { experiences, workStats } from "@/lib/site-data";
 
@@ -90,6 +91,17 @@ export function WorkSection() {
                     <p className="mt-0.5 text-sm font-medium text-ink/70 sm:text-base">
                       {job.company}
                     </p>
+                    {job.link && (
+                      <Link
+                        href={job.link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center rounded-full bg-pink-hot px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-pink-deep"
+                      >
+                        {job.link.label}
+                        <span aria-hidden="true" className="ml-1.5">↗</span>
+                      </Link>
+                    )}
                   </div>
                   <p className="max-w-xs text-right text-xs text-pink-deep italic sm:text-sm">
                     {job.highlight}

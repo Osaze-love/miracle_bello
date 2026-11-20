@@ -6,7 +6,7 @@ export const siteContact = {
     "https://www.linkedin.com/in/miracle-bello-boluwaduro-25b9933b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 } as const;
 
-export const cvUrl = "/miracle-bello-cv.docx";
+export const cvUrl = "/Miracle-Bello-CV-updated.docx";
 
 export const workStats = [
   { value: "40M+", label: "YouTube views grown" },
@@ -22,9 +22,46 @@ export type Experience = {
   tag: string;
   highlight: string;
   bullets: string[];
+  link?: {
+    label: string;
+    url: string;
+  };
 };
 
 export const experiences: Experience[] = [
+  {
+    role: "Social Media Manager / Content Strategist",
+    company: "Zenaex — Lagos, Nigeria",
+    period: "May 2026 – Present",
+    tag: "Fintech",
+    highlight: "Social strategy · Campaigns · Pre-launch marketing",
+    link: {
+      label: "View Zenaex on Instagram",
+      url: "https://www.instagram.com/zenaex.app?avpt=MW0ycXVhemFuNWd5Zw==",
+    },
+    bullets: [
+      "Develop and execute social media content strategies that align with Zenaex's brand and audience growth objectives.",
+      "Create engaging, educational content, video scripts, captions, and promotional copy for digital finance audiences.",
+      "Develop campaign concepts and manage brand communication across social media channels.",
+      "Simplify complex digital finance concepts to make them relatable and accessible to everyday audiences.",
+      "Contribute to pre-launch marketing initiatives designed to build brand awareness and audience anticipation.",
+    ],
+  },
+  {
+    role: "Brand & Strategy Lead",
+    company: "Mangrove Technologies & Nairobi Startup Club — Nairobi and United States",
+    period: "July – August 2026",
+    tag: "Brand Strategy",
+    highlight: "Market research · Brand positioning · Content strategy",
+    bullets: [
+      "Develop brand and content strategies for Mangrove Technologies and Nairobi Startup Club.",
+      "Conduct competitor and market research to identify opportunities and inform strategic decisions.",
+      "Identify brand positioning opportunities and clarify the brands' value propositions.",
+      "Carry out audience and SWOT analysis to guide marketing and communication priorities.",
+      "Develop content pillars and platform-specific strategies for consistent, audience-focused storytelling.",
+      "Create editorial calendars aligned with each brand's marketing objectives.",
+    ],
+  },
   {
     role: "Social Media Manager & Community Manager",
     company: "Kradle Africa",
